@@ -21,6 +21,13 @@ NEWSPIDER_MODULE = 'sweat.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
+RANDOM_DELAY = 0.5
+
+RETRY_ENABLED = True
+RETRY_TIMES = 3
+
+LOG_LEVEL= 'DEBUG'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -64,9 +71,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'sweat.pipelines.SweatPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'sweat.pipelines.SweatPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
